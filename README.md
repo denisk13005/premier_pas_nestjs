@@ -38,3 +38,70 @@ findAll() {
 return 'This route uses a wildcard';
 }
 ```
+
+## En-têtes
+
+Pour spécifier un en-tête de réponse personnalisé, vous pouvez utiliser un décorateur @Header() ou un objet de réponse spécifique à la bibliothèque (et appeler res.header()
+
+```
+@Post()
+@Header('Cache-Control', 'none')
+create() {
+  return 'This action adds a new cat';
+}
+```
+
+## Redirection#
+
+Pour rediriger une réponse vers une URL spécifique, vous pouvez utiliser un décorateur @Redirect() ou un objet de réponse spécifique à la bibliothèque (et appeler res.redirect()
+
+@Redirect() prend deux arguments, url et statusCode, les deux sont facultatifs. La valeur par défaut de statusCode est 302 (Found) si elle est omise.
+
+```
+
+@Get('docs')
+@Redirect('https://docs.nestjs.com', 302)
+getDocs(@Query('version') version) {
+  if (version && version === '5') {
+    return { url: 'https://docs.nestjs.com/v5/' };
+  }
+}
+
+```
+
+## Paramètres de l’itinéraire#
+
+Les itinéraires avec des chemins statiques ne fonctionneront pas lorsque vous devez accepter des données dynamiques dans le cadre de la demande (par exemple, GET /cats/11 pour obtenir cat avec l’id 1). Afin de définir des itinéraires avec des paramètres, nous pouvons ajouter des jetons de paramètres de routage dans le chemin de l’itinéraire pour capturer la valeur dynamique à cette position dans l’URL de la demande. Le jeton de paramètre de routage dans l’exemple de décorateur @Get() ci-dessous illustre cette utilisation. Les paramètres de routage ainsi déclarés sont accessibles à l’aide du décorateur @Param() qui doit être ajouté à la signature de la méthode.
+
+```
+
+@Get(':id')
+findOne(@Param() params): string {
+  console.log(params.id);
+  return `This action returns a #${params.id} cat`;
+}
+```
+
+## Approche propre à la bibliothèque#
+
+Jusqu’à présent, nous avons discuté de la méthode standard de Nest pour manipuler les réponses. La deuxième façon de manipuler la réponse consiste à utiliser un objet de réponse spécifique à la bibliothèque. Afin d’injecter un objet de réponse particulier, nous devons utiliser le décorateur @Res() Pour montrer les différences, réécrivons le CatsController comme suit :
+
+```
+
+import { Controller, Get, Post, Res, HttpStatus } from '@nestjs/common';
+import { Response } from 'express';
+
+@Controller('cats')
+export class CatsController {
+  @Post()
+  create(@Res() res: Response) {
+    res.status(HttpStatus.CREATED).send();
+  }
+
+  @Get()
+  findAll(@Res() res: Response) {
+     res.status(HttpStatus.OK).json([]);
+  }
+}
+
+```
