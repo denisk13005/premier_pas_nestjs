@@ -10,6 +10,7 @@ Le but d’un contrôleur est de recevoir des demandes spécifiques pour l’app
 
 Afin de créer un contrôleur de base, nous utilisons des classes et des décorateurs. Les décorateurs associent des classes aux métadonnées requises et permettent à Nest de créer une carte de routage (lier les demandes aux contrôleurs correspondants).
 
+```
 import { Controller, Get, Post } from '@nestjs/common';
 
 @Controller('cats')
@@ -24,12 +25,16 @@ findAll(): string {
 return 'This action returns all cats';
 }
 }
+```
 
 ## Caractères génériques de routage
 
 Les itinéraires basés sur des modèles sont également pris en charge. Par exemple, l’astérisque est utilisé comme caractère générique et correspond à n’importe quelle combinaison de caractères.
 
+```
+
 @Get('ab\*cd')
 findAll() {
 return 'This route uses a wildcard';
 }
+```
