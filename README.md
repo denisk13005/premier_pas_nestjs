@@ -135,3 +135,9 @@ on utilise différtents décorateurs selon nos besoin @Get(), @Post, @Body ...
 on type les données dans le dossier interface
 
 on type les data transfert objects (dto) dans le dossier dto en utilisant une classe pour que le typage soit tjs visible lors de la compilation vers js
+
+on fait le update avec @Patch()
+
+# Test le auth d'après la doc
+
+<a href="https://docs.nestjs.com/security/authentication">Lien Authentication</a>
