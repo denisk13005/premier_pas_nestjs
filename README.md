@@ -2,7 +2,7 @@
 
 Le main.ts comprend une fonction asynchrone, qui va amorcer notre application
 
-## Contrôleurs
+# Contrôleurs
 
 Les contrôleurs sont responsables du traitement des demandes entrantes et du retour des réponses au client.
 
@@ -105,3 +105,9 @@ export class CatsController {
 }
 
 ```
+
+# Fournisseurs
+
+Les fournisseurs sont un concept fondamental dans Nest. De nombreuses classes Nest de base peuvent être traitées comme un fournisseur : services, référentiels, usines, assistants, etc. L’idée principale d’un fournisseur est qu’il peut être injecté comme une dépendance; Cela signifie que les objets peuvent créer diverses relations les uns avec les autres, et que la fonction de « câblage » des instances d’objets peut en grande partie être déléguée au système d’exécution Nest.
+
+Dans le chapitre précédent, nous avons construit un CatsController simple. Les contrôleurs doivent gérer les requêtes HTTP et déléguer des tâches plus complexes aux fournisseurs. Les fournisseurs sont des classes JavaScript simples qui sont déclarées en tant que providers dans un module.
