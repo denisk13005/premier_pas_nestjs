@@ -114,7 +114,7 @@ Dans le chapitre précédent, nous avons construit un CatsController simple. Les
 
 # tuto vidéo code concept
 
-<a href="https://www.youtube.com/playlist?list=PLs_WqGRq69UiSaXX85NRUX4rkeiNP3K6l" target="blank">Lien Playlist</a>
+<a href="https://www.youtube.com/playlist?list=PLs_WqGRq69UiSaXX85NRUX4rkeiNP3K6l" target="_blank">Lien Playlist</a>
 
 ## todolist
 
