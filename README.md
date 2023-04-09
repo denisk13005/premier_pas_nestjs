@@ -111,3 +111,15 @@ export class CatsController {
 Les fournisseurs sont un concept fondamental dans Nest. De nombreuses classes Nest de base peuvent être traitées comme un fournisseur : services, référentiels, usines, assistants, etc. L’idée principale d’un fournisseur est qu’il peut être injecté comme une dépendance; Cela signifie que les objets peuvent créer diverses relations les uns avec les autres, et que la fonction de « câblage » des instances d’objets peut en grande partie être déléguée au système d’exécution Nest.
 
 Dans le chapitre précédent, nous avons construit un CatsController simple. Les contrôleurs doivent gérer les requêtes HTTP et déléguer des tâches plus complexes aux fournisseurs. Les fournisseurs sont des classes JavaScript simples qui sont déclarées en tant que providers dans un module.
+
+# tuto vidéo code concept
+
+https://www.youtube.com/playlist?list=PLs_WqGRq69UiSaXX85NRUX4rkeiNP3K6l
+
+## todolist
+
+on crée une app todo
+
+## on crée le dossier todos dans source
+
+dans ce dossier on crée lle module avec la ligne de commande `nest g mo todos`
