@@ -123,3 +123,15 @@ on crée une app todo
 ## on crée le dossier todos dans source
 
 dans ce dossier on crée lle module avec la ligne de commande `nest g mo todos`
+
+le controlleur puis le service associé
+
+le controlleur se charge du trafic et redirige vers le service associé en fonction de la requête reçu
+
+Toutes les fonctions sont exécutées dans le fichier service
+
+on utilise différtents décorateurs selon nos besoin @Get(), @Post, @Body ...
+
+on type les données dans le dossier interface
+
+on type les data transfert objects (dto) dans le dossier dto en utilisant une classe pour que le typage soit tjs visible lors de la compilation vers js

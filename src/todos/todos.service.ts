@@ -17,4 +17,9 @@ export class TodosService {
   create(todo: Todo) {
     this.todos = [...this.todos, todo];
   }
+  update(id: string, updateTodo: Todo) {
+    const index: number = this.todos.findIndex((el) => el.id === Number(id));
+    this.todos.splice(index, 1, updateTodo);
+    console.log(index, 'index');
+  }
 }
