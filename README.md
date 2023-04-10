@@ -156,4 +156,11 @@ https://www.youtube.com/watch?v=VFGuuxs31NU&list=PLl3CtU4THqPZt6ay6iYT3uZaOMT_yU
 
 https://www.youtube.com/watch?v=FpQAs1jLQW4&list=PLl3CtU4THqPZt6ay6iYT3uZaOMT_yUN-l&index=18
 
+## middleware 
 
+ils s'intercalent dans la chaine http afin d'exécuter une fonction puis transmettent la main au middleware suivant ou à la suite de la châine http
+On peut soit les déclarer dans appModule, soit dans main.ts, le middleware cors permet de travailler sur la sécurité et de n'accepterr que les url définies dans les options
+https://www.youtube.com/watch?v=O7R1F24amSU&list=PLl3CtU4THqPZt6ay6iYT3uZaOMT_yUN-l&index=22
+## les intercepteurs 
+intercepte la requête dans les 2 sens (requête et réponse)
+https://www.youtube.com/watch?v=pz22Ks2_OfM&list=PLl3CtU4THqPZt6ay6iYT3uZaOMT_yUN-l&index=24
