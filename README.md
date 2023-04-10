@@ -142,7 +142,7 @@ on fait le update avec @Patch()
 
 <a href="https://docs.nestjs.com/security/authentication">Lien Authentication</a>
 
-#test d'un noiuveau tuto 
+# test d'un noiuveau tuto 
 
 module met a dispo ce qu'il exporte, décorer avec @Global pour le rendre global et ne plus avoir à l'import dans tous les autres modules qui l'utiliseront ,
 on le déclarement uniquement dans 'import de appModule
@@ -151,4 +151,9 @@ Les pipes servenà transformer un type de données en une autre
 
 les validation pipe servent à definir les champs dans nos dto grace à des bibliothèques et à renvoyer des msg d'erreur apropriés
 https://www.youtube.com/watch?v=VFGuuxs31NU&list=PLl3CtU4THqPZt6ay6iYT3uZaOMT_yUN-l&index=17
+
+## avec les classes validator on peut checker et transformer les types automatiquement mais aussi mettre en place des règles de sécurité pour éviter les =actions malveillantes 
+
+https://www.youtube.com/watch?v=FpQAs1jLQW4&list=PLl3CtU4THqPZt6ay6iYT3uZaOMT_yUN-l&index=18
+
 
